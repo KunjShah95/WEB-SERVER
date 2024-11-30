@@ -1,86 +1,106 @@
-# Simple Python Web Server
+
+# My Own Web Server
+
+![Status](https://img.shields.io/badge/status-active-brightgreen) 
+![Language](https://img.shields.io/badge/language-Python-blue) 
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+## 📖 Overview
+**My Own Web Server** is a lightweight, Python-based HTTP server designed to serve static files like HTML and JSON. This project showcases fundamental server-client interactions and demonstrates efficient handling of HTTP requests and errors. It is a great starting point for anyone exploring the inner workings of web servers.
 
 
-## Overview
 
-This project implements a simple web server using Python's built-in `socket` library. It is designed to serve static HTML and JSON files over HTTP. The server supports basic error handling for common HTTP errors and provides a foundational understanding of how web servers operate at a low level.
+## 🌟 Features
+- **Serve Static Files**: Handles requests for HTML and JSON files efficiently.
+- **Custom Error Handling**: Provides user-friendly responses for common errors such as:
+  - `404 Not Found`
+  - `405 Method Not Allowed`
+- **Dynamic File Serving**:
+  - Serves `index.html` for the root path (`/`).
+  - Serves `book.json` when the `/book` endpoint is accessed.
+- **Minimalistic and Educational**: Simple architecture suitable for learning and extension.
 
-## Table of Contents
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [File Structure](#file-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Error Handling](#error-handling)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
+## 🛠 Prerequisites
+- Python 3.6 or higher
+- Basic understanding of HTTP and networking concepts
+- File system containing:
+  - `index.html`: HTML file representing the homepage.
+  - `book.json`: A JSON file containing sample book details.
 
-## Features
 
-- **HTTP GET Requests**: Handles GET requests for specific paths.
-- **Static File Serving**: Serves an HTML file and a JSON file.
-- **Error Handling**: Provides meaningful error messages for 404, 405, and malformed requests.
-- **Cross-Platform**: Compatible with any system that supports Python.
+## 🚀 Getting Started
 
-## Technologies Used
+### Clone the Repository
+To get started, clone this repository to your local system:
 
-- Python 3.x
-- Socket Programming
+git clone https://github.com/KunjShah95/my-own-web-server.git
+cd my-own-web-server
 
-## File Structure
-d:
-└── PYTHON PROJECTS
-└── WEB SERVER
-├── main.py # The main server script ├── index.html # HTML file served at the root path └── book.json # JSON file served at the /book path
+### Run the Server
+Follow these steps to launch the server:
+1. Verify the presence of `main.py`, `index.html`, and `book.json` in the project directory.
+2. Execute the Python server script:
+   
+   python main.py
+   
+3. Open your web browser and visit `http://localhost:8080`.
 
-Insert Code
-Edit
-Copy code
 
-## Installation
 
-1. Clone this repository to your local machine:
+## 📂 Directory Structure
+The project files are organized as follows:
 
-   ```bash
-   git clone https://github.com/yourusername/simple-python-web-server.git
-Navigate to the project directory:
+├── book.json        # Sample JSON file containing book details
+├── index.html       # Static HTML file serving as the homepage
+├── main.py          # Python script implementing the web server
 
-bash
-Insert Code
-Edit
-Copy code
-cd simple-python-web-server
-Ensure you have Python 3.x installed. You can download it from python.org.
 
-Usage
-Start the server by running the following command:
 
-bash
-Insert Code
-Edit
-Copy code
-python main.py
-Open a web browser and visit http://localhost:8080 to view the HTML page.
 
-To access the JSON data, navigate to http://localhost:8080/book.
+## ⚙️ How It Works
+1. **Server Initialization**:
+   - The server listens for incoming connections on `0.0.0.0` at port `8080`.
+2. **Request Handling**:
+   - **Root Path (`/`)**: Serves the `index.html` file as the homepage.
+   - **Book Path (`/book`)**: Serves the `book.json` file with `application/json` content type.
+   - **Other Paths**: Returns a `404 Not Found` response.
+   - **Unsupported HTTP Methods**: Returns a `405 Method Not Allowed` response.
+3. **Error Management**:
+   - Ensures graceful handling of invalid requests and provides meaningful error messages.
 
-API Endpoints
-GET /: Returns the index.html file.
-GET /book: Returns the book.json file.
-404 Not Found: Returned for any path not defined in the server.
-405 Method Not Allowed: Returned for any request method other than GET.
-Error Handling
-The server includes basic error handling for common HTTP errors:
 
-400 Bad Request: Returned when the request is malformed.
-404 Not Found: Returned when the requested resource does not exist.
-405 Method Not Allowed: Returned when a request method other than GET is used.
-500 Internal Server Error: Returned for unexpected errors during processing.
-Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 🛠 Technologies Used
+- **Python**: Core programming language for the server implementation.
+- **Socket Programming**: Handles server-client communication.
+- **HTTP Protocol**: Serves static files and processes HTTP requests.
+
+
+## 🤝 Contributing
+Contributions are always welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch:
+
+   git checkout -b feature/your-feature
+   
+4. Commit your changes:
+   
+   git commit -m "Add your message"
+   
+5. Push to the branch:
+   
+   git push origin feature/your-feature
+   
+6. Open a pull request.
+
+
+
+## 📜 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for detailed terms and conditions.
+
+
+## 📚 Acknowledgments
+This project is inspired by the simplicity of learning projects. Special thanks to the open-source community for their valuable resources and guidance.
+
+
