@@ -51,9 +51,12 @@ Follow these steps to launch the server:
 ## 📂 Directory Structure
 The project files are organized as follows:
 
-├── book.json        # Sample JSON file containing book details
-├── index.html       # Static HTML file serving as the homepage
-├── main.py          # Python script implementing the web server
+├── book.json       
+ # Sample JSON file containing book details
+├── index.html      
+ # Static HTML file serving as the homepage
+├── main.py         
+ # Python script implementing the web server
 
 
 
